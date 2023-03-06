@@ -1,0 +1,22 @@
+---
+- name: Getting Started First Playbook Extended
+  hosts: all
+  gather_facts: true
+  become: yes
+  tasks:
+
+    - name: Print message
+      debug:
+        msg: Hello world
+
+    - name: Create local folder for downloads
+      file:
+        path: ~/test
+        state: directory
+        mode: 0777
+
+    - name: print to file
+      ansible.builtin.shell:
+        cmd: echo "hello" > ~/test/hello.txt
+           
+       
