@@ -13,6 +13,6 @@
 
     - name: print to file
       ansible.builtin.shell:
-        cmd: echo "hello" > ~/test/hello.txt
+        cmd: echo "hello" > /opt/test/hello.txt
            
        
