@@ -7,7 +7,7 @@
 
     - name: Create local folder for downloads
       file:
-        path: ~/test
+        path: /opt/test
         state: directory
         mode: 0777
 
