@@ -7,7 +7,7 @@
 
     - name: Create local folder for downloads
       file:
-        path: "/opt/{{ test_input }}
+        path: "/opt/{{ test_input }}"
         state: directory
         mode: 0777
 
