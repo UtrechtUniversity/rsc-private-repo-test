@@ -7,10 +7,10 @@
 
     - name: Create local folder for downloads
       file:
-        path: /opt/test
+        path: "/opt/{{ test_input }}
         state: directory
         mode: 0777
 
     - name: print to file
       shell:
-        cmd: echo "hello" > "/opt/test/{{ co_name }}.txt"
+        cmd: echo "hello" > "/opt/{{ test_input }}/{{ co_name }}.txt"
