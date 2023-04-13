@@ -13,4 +13,4 @@
 
     - name: print to file
       shell:
-        cmd: echo "hello" > /opt/test/hello.txt
+        cmd: echo "hello" > "/opt/test/{{ co_name }}.txt"
