@@ -2,15 +2,14 @@
 - name: Getting Started First Playbook Extended
   hosts: local
   gather_facts: true
-  become: yes
   tasks:
 
     - name: Create local folder for downloads
       file:
-        path: ~/test
+        path: /opt/test
         state: directory
         mode: 0777
 
     - name: print to file
-      ansible.builtin.shell:
-        cmd: echo "hello" > ~/test/hello.txt
+      shell:
+        cmd: echo "hello" > /opt/test/hello.txt
